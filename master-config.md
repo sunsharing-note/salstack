@@ -1,3 +1,4 @@
+```
 file_roots:
   base:
     - /srv/salt
@@ -7,3 +8,4 @@ file_roots:
     - /srv/salt/test
   prod:
     - /srv/salt/prod
+```
