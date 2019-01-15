@@ -16,9 +16,14 @@
 salt '*' grains.get test
  
  ```
-* pillar 
+* pillar 存储k/v
  
  ```
+ pillar在master上设置
+修改master配置 pillar_opts: True并重启master 但一般不建议这么用 这会导致自定义的pillar无法使用
+ salt '*' pillar.items
+ 
+ 修改pillar_roots 创建相关目录并重启master
  
  ```
 
