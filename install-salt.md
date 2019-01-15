@@ -3,10 +3,12 @@
 # 所有的minion连接到master的4505端口 4506收
 1. 获取repo: wget http://mirrors.aliyun.com/repo/epel-7.repo
 2.安装：yum -y install salt-master salt-minion
-3.启动： systemctl start salt-master # 4505 4506 端口  zeromq
+3.启动：systemctl enable salt-master
+systemctl start salt-master # 4505 4506 端口  zeromq
 vim /etc/salt/minion # id可改
 master: {masterIP}
 systemctl start salt-minion
+systemctl enable salt-minion
 4.认证：
 cat /etc/salt/minion_id # 查看id
 tree /etc/salt
