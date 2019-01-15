@@ -14,6 +14,7 @@ cat /etc/salt/minion_id # 查看id
 tree /etc/salt
 cat pki/master/minions_pre/ansible-k8s3 #存放公钥
 salt-key #列出所有keys
+salt-key -a -A -y #接受所有
 5.测试 salt "*" test.ping   salt "*" cmd.run "ss -tnl"
 
 修改id后需要重新认证
